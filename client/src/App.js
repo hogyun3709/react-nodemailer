@@ -49,7 +49,7 @@ export default class App extends Component {
       <div className="container fadein">
         <Notification />
         <main>{content()}</main>
-        <Footer />
+        <Footer githubRepo="react-nodemailer" />
       </div>
     );
   };
