@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { notify } from "react-notify-toast";
 import Spinner from "./Spinner";
 import { API_URL } from "../config";
@@ -27,9 +27,7 @@ export default class Confirm extends Component {
       {this.state.confirming ? (
         <Spinner size="8x" spinning={"spinning"} />
       ) : (
-        <Link to="/">
-          <Spinner size="8x" spinning={""} />
-        </Link>
+        <Redirect from="*" to="/" />
       )}
     </div>
   );

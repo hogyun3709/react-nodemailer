@@ -41,6 +41,7 @@ export default class Landing extends Component {
             type="email"
             name="email"
             ref={input => (this.email = input)}
+            autoComplete="off"
             required
           />
           <label htmlFor="email">Email</label>
