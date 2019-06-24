@@ -12,8 +12,7 @@ exports.collectEmail = (req, res) => {
       if (!user) {
         User.create({ email })
           .then(newUser =>
-            sendEmail(newUSer.email, templates.confirm(newUser._id))
-          )
+            sendEmail(newUser.email, templates.confirm(newUser._id)))
           .then(() => res.json({ msg: msgs.confirm }))
           .catch(err => console.log(err));
       } else if (user && !user.confirmed) {
