@@ -35,7 +35,7 @@ exports.collectEmail = (req, res) => {
 exports.confirmEmail = (req, res) => {
   const { id } = req.params;
 
-  User.findBy(id)
+  User.findById(id)
     .then(user => {
       if (!user) {
         res.json({ msg: msgs.couldNotfound });
