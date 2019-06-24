@@ -17,7 +17,7 @@ export default class App extends Component {
 
   /* When using free hosting/deploying services, let the server keep running even no one use the application. */
   componentDidMount = () => {
-    fetch(`${API_URL}/wake-up`)
+    fetch(`${API_URL}`)
       .then(res => res.json())
       .then(() => {
         this.setState({ loading: false });

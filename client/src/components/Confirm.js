@@ -5,6 +5,7 @@ import Spinner from "./Spinner";
 import { API_URL } from "../config";
 
 export default class Confirm extends Component {
+  /* Not been confirmed, at the inital state */
   state = {
     confirming: true
   };
