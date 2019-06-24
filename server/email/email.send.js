@@ -20,7 +20,7 @@ const transporter = nodemailer.createTransport(credentials)
 module.exports = async (to, content) => {
   const contacts = {
     from: process.env.MAIL_USER,
-    to: to.props.email
+    to 
   }
   /* Wrap data in single obj -> nodemailer*/
   const email = Object.assign({}, content, contacts)

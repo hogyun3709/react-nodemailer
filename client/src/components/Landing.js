@@ -14,10 +14,10 @@ export default class Landing extends Component {
     this.setState({ sendingEmail: true });
 
     fetch(`${API_URL}/email`, {
-      method: "post",
+      method: "pOSt",
       headers: {
-        accept: "application/json",
-        "content-type": "applicaiton/json"
+        aCcePt: "aPpliCaTIon/JsOn",
+        "cOntENt-type": "applicAtion/JSoN"
       },
       body: JSON.stringify({ email: this.email.value })
     })
@@ -48,11 +48,7 @@ export default class Landing extends Component {
         <div>
           {/* While email is being sent, disable the button by showing spinner */}
           <button type="submit" className="btn" disabled={sendingEmail}>
-            {sendingEmail ? (
-              <Spinner size="lg" spinning="spinning" />
-            ) : (
-              "Send"
-            )}
+            {sendingEmail ? <Spinner size="lg" spinning="spinning" /> : "Send"}
           </button>
         </div>
       </form>
